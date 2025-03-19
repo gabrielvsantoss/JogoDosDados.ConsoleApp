@@ -2,27 +2,48 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        const int LimiteLinhaDeChegada = 30;
+          static void Main(string[] args)
         {
             while (true)
             {
-                Console.Clear();
-                Console.WriteLine("---------------------");
-                Console.WriteLine("Jogo dos Dados");
-                Console.WriteLine("---------------------");
+                int posicaojogador = 0;
+                bool JogoEmAndamento = true;
 
-                Console.Write("Pressione ENTER para lançar um dado");
-                Console.ReadLine();
+                while (JogoEmAndamento)
+                {
+                    Console.Clear();
+                    Console.WriteLine("---------------------");
+                    Console.WriteLine("Jogo dos Dados");
+                    Console.WriteLine("---------------------");
 
-                Random geradordenumerosaleatorios = new Random();
-                int resultado = geradordenumerosaleatorios.Next(1, 7);
+                    Console.Write("Pressione ENTER para lançar um dado");
+                    Console.ReadLine();
 
-                Console.WriteLine("---------------------");
-                Console.WriteLine($"O valor sorteado foi {resultado}!");
-                Console.WriteLine("---------------------");
+                    Random geradordenumerosaleatorios = new Random();
+                    int resultado = geradordenumerosaleatorios.Next(1, 7);
 
+                    Console.WriteLine("---------------------");
+                    Console.WriteLine($"O valor sorteado foi {resultado}!");
+                    Console.WriteLine("---------------------");
 
+                    posicaojogador += resultado;
 
+                    if(posicaojogador >= LimiteLinhaDeChegada)
+                    {
+                        JogoEmAndamento = false;
+                        Console.WriteLine("Parabens voce alcançou a linha de chegada!");
+                        Console.WriteLine("-----------------------------------------------");
+                    }
+
+                    else
+                    {
+                        Console.WriteLine($"Voce esta na posicao {posicaojogador} de {LimiteLinhaDeChegada}");
+                        Console.WriteLine("-----------------------------");
+                        Console.ReadLine();
+                           
+                    }
+                }
 
 
 
