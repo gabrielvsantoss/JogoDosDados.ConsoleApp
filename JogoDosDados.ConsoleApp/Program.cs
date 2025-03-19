@@ -29,20 +29,44 @@
 
                     posicaojogador += resultado;
 
-                    if(posicaojogador >= LimiteLinhaDeChegada)
+                    Console.WriteLine($"Voce esta na posicao {posicaojogador} de {LimiteLinhaDeChegada}");
+                    Console.WriteLine("-----------------------------");
+                    Console.ReadLine();
+
+                    bool  avanco = posicaojogador == 5 || posicaojogador ==  10 || posicaojogador ==  15 || posicaojogador == 25;
+                    bool recuo = posicaojogador == 7 || posicaojogador == 13 || posicaojogador == 20;
+
+                      if(avanco)
+                    {
+                        Console.WriteLine("EVENTO ESPECIAL!: Avanço extra de 3 casas");
+                        Console.WriteLine("-------------------------------------------");
+
+                        posicaojogador += 3;
+                        Console.WriteLine($"Voce avançou para a posição {posicaojogador}");
+                        Console.WriteLine("-------------------------------------------");
+
+                    }
+
+
+                    else if (recuo)
+                    {
+                        Console.WriteLine("EVENTO ESPECIAL!: Recuo de 2 casas");
+                        Console.WriteLine("-------------------------------------------");
+
+                        posicaojogador -= 2;
+                        Console.WriteLine($"Voce  recuo para a posição {posicaojogador}");
+                        Console.WriteLine("-------------------------------------------");
+
+                    }
+
+                    if (posicaojogador >= LimiteLinhaDeChegada)
                     {
                         JogoEmAndamento = false;
                         Console.WriteLine("Parabens voce alcançou a linha de chegada!");
                         Console.WriteLine("-----------------------------------------------");
                     }
 
-                    else
-                    {
-                        Console.WriteLine($"Voce esta na posicao {posicaojogador} de {LimiteLinhaDeChegada}");
-                        Console.WriteLine("-----------------------------");
-                        Console.ReadLine();
-                           
-                    }
+                    
                 }
 
 
