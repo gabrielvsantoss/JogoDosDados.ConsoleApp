@@ -2,7 +2,7 @@
 namespace JogoDosDados.ConsoleApp
 {
 
-    public class Dados
+    public class LogicaJogo
     {
         public static  int posicaojogador = 0;
         public static int posicaocomputador = 0;
@@ -31,13 +31,13 @@ namespace JogoDosDados.ConsoleApp
             int resultadoUsuario;
             Console.Write("Pressione ENTER para lançar um dado");
             Console.ReadLine();
-            resultadoUsuario = Dados.Sortear();
+            resultadoUsuario = LogicaJogo.Sortear();
             if (resultadoUsuario == 6)
             {
                 Console.WriteLine("---------------------");
                 Console.WriteLine("O valor sorteado foi 6! e voce irá ganhar uma rodada Bonus\n Tecle ENTER para jogar a rodada bonus");
                 Console.ReadLine();
-                RodadaBonus = Dados.Sortear();
+                RodadaBonus = LogicaJogo.Sortear();
                 Console.WriteLine("---------------------");
                 Console.WriteLine($"O valor na rodada  bonus foi {RodadaBonus}!");
                 Console.WriteLine("---------------------");
@@ -61,13 +61,13 @@ namespace JogoDosDados.ConsoleApp
             int RodadaBonusComputador = 0;
 
 
-            int ResultadoComputador = Dados.Sortear();
+            int ResultadoComputador = LogicaJogo.Sortear();
             if (ResultadoComputador == 6)
             {
                 Console.WriteLine("---------------------");
                 Console.WriteLine("O valor sorteado foi 6! O computador irá ganhar uma rodada Bonus\n Tecle ENTER para visualizar a rodada bonus do computador");
                 Console.ReadLine();
-                RodadaBonusComputador = Dados.Sortear();
+                RodadaBonusComputador = LogicaJogo.Sortear();
                 Console.WriteLine("---------------------");
                 Console.WriteLine($"O valor sorteado na rodada bonus do computador foi {RodadaBonusComputador}!");
             }
@@ -173,12 +173,12 @@ namespace JogoDosDados.ConsoleApp
                 Console.WriteLine("O jogador que tirar o maior numero ganha!");
                 Console.WriteLine("Tecle ENTER para rodar o dado!");
                 Console.ReadLine();
-                int resultadoUsuario2 = Dados.Sortear();
+                int resultadoUsuario2 = LogicaJogo.Sortear();
                 Console.WriteLine($"Voce tirou {resultadoUsuario2} no dado!");
 
                 Console.WriteLine("Tecle ENTER para visualizar a rodada do computador!");
                 Console.ReadLine();
-                int ResultadoComputador2 = Dados.Sortear();
+                int ResultadoComputador2 = LogicaJogo.Sortear();
                 Console.WriteLine($"O computador tirou {ResultadoComputador2} no dado!");
 
                 if (ResultadoComputador2 > resultadoUsuario2)
