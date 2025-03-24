@@ -1,5 +1,6 @@
 # Jogo dos Dados
 
+![](https://i.imgur.com/VPDE6NF.gif)
 - O jogo dos dados consiste em uma disputa entre o usuario e o computador para chegar ao fim do tabuleiro (posição 30).
 
 ## - Funcionalidades:
@@ -7,7 +8,6 @@
 - **Interação com o usuario** : O jogo permite o usuario participar diretamente do jogo como se realmente estivesse jogando um dado.
 - **Condição de Vitória ou Derrota** : O jogo consegue perceber se o usuario ganhou ou perdeu o jogo.
 - **Condições extras**: O jogo traz algumas condições em cas especificas como recuar duas casas ou andar tres casas extras.
-- ** Critério de desempate: O jogo imprime uma rodada extra caso haja um empate.
 
 
 ## - Como usar?

@@ -42,9 +42,11 @@ namespace JogoDosDados.ConsoleApp
                 Console.WriteLine($"O valor na rodada  bonus foi {RodadaBonus}!");
                 Console.WriteLine("---------------------");
             }
+            else if(resultadoUsuario != 6) { 
             Console.WriteLine("---------------------");
             Console.WriteLine($"O valor sorteado foi {resultadoUsuario}!");
             Console.WriteLine("---------------------");
+                }
             posicaojogador += resultadoUsuario + RodadaBonus;
             Console.WriteLine($"Voce esta na posicao {posicaojogador} de {LimiteLinhaDeChegada}");
             Console.WriteLine("-----------------------------");
